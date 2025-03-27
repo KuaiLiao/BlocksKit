@@ -115,15 +115,4 @@ typedef __nonnull id <NSObject, NSCopying> BKCancellationToken;
 
 @end
 
-@interface NSObject (BKBlockExecution_Deprecated)
-
-- (BKCancellationToken)bk_performBlock:(void (^)(id obj))block afterDelay:(NSTimeInterval)delay DEPRECATED_MSG_ATTRIBUTE("Replaced with -bk_performAfterDelay:usingBlock:");
-+ (BKCancellationToken)bk_performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay DEPRECATED_MSG_ATTRIBUTE("Replaced with +bk_performAfterDelay:usingBlock:");
-- (BKCancellationToken)bk_performBlockInBackground:(void (^)(id obj))block afterDelay:(NSTimeInterval)delay DEPRECATED_MSG_ATTRIBUTE("Replaced with -bk_performInBackgroundAfterDelay:usingBlock:");
-+ (BKCancellationToken)bk_performBlockInBackground:(void (^)(void))block afterDelay:(NSTimeInterval)delay DEPRECATED_MSG_ATTRIBUTE("Replaced with +bk_performInBackgroundAfterDelay:usingBlock:");
-+ (BKCancellationToken)bk_performBlock:(void (^)(void))block onQueue:(dispatch_queue_t)queue afterDelay:(NSTimeInterval)delay DEPRECATED_MSG_ATTRIBUTE("Replaced with -bk_performOnQueue:afterDelay:usingBlock:");
-- (BKCancellationToken)bk_performBlock:(void (^)(id obj))block onQueue:(dispatch_queue_t)queue afterDelay:(NSTimeInterval)delay DEPRECATED_MSG_ATTRIBUTE("Replaced with -bk_performOnQueue:afterDelay:usingBlock:");
-
-@end
-
 NS_ASSUME_NONNULL_END

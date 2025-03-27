@@ -29,22 +29,3 @@
 @end
 
 #pragma clang diagnostic pop
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-
-@implementation NSTimer (BlocksKit_Deprecated)
-
-+ (instancetype)bk_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats
-{
-    return [self bk_scheduleTimerWithTimeInterval:seconds repeats:repeats usingBlock:block];
-}
-
-+ (instancetype)bk_timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats
-{
-    return [self bk_timerWithTimeInterval:seconds repeats:repeats usingBlock:block];
-}
-
-@end
-
-#pragma clang diagnostic pop
