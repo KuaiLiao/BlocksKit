@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface UIView (BlocksKit)
 
+/** If it is set to UIGestureRecognizerStatePossible, you can listen more.
+ */
+@property (nonatomic, assign) UIGestureRecognizerState bk_beginGestureRecognizerState;
+
 /** Abstract creation of a block-backed UITapGestureRecognizer.
 
  This method allows for the recognition of any arbitrary number
