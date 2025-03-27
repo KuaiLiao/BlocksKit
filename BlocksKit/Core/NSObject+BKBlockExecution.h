@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef __nonnull id <NSObject, NSCopying> BKCancellationToken;
+typedef id <NSObject, NSCopying> BKCancellationToken;
 
 /** Block execution on *any* object.
 
