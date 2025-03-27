@@ -3,8 +3,12 @@
 //  BlocksKit
 //
 
-#import "BKDefines.h"
 #import <MessageUI/MessageUI.h>
+#if __has_include(<BlocksKit/BKDefines.h>)
+#import <BlocksKit/BKDefines.h>
+#else
+#import "BKDefines.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

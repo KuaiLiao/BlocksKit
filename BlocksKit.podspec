@@ -11,6 +11,10 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
   s.ios.deployment_target = '6.0'
   s.watchos.deployment_target = '2.0'
+  
+  s.prefix_header_file = false
+  s.module_name = s.name
+  s.header_dir = './'
 
   s.default_subspec = 'All'
   s.subspec 'All' do |ss|

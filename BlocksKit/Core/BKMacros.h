@@ -5,11 +5,19 @@
 //  Includes code by Michael Ash. <https://github.com/mikeash>.
 //
 
+#if __has_include(<BlocksKit/BKDefines.h>)
+#import <BlocksKit/BKDefines.h>
+#import <BlocksKit/NSArray+BlocksKit.h>
+#import <BlocksKit/NSSet+BlocksKit.h>
+#import <BlocksKit/NSDictionary+BlocksKit.h>
+#import <BlocksKit/NSIndexSet+BlocksKit.h>
+#else
 #import "BKDefines.h"
 #import "NSArray+BlocksKit.h"
 #import "NSSet+BlocksKit.h"
 #import "NSDictionary+BlocksKit.h"
 #import "NSIndexSet+BlocksKit.h"
+#endif
 
 #ifndef __BLOCKSKIT_MACROS__
 #define __BLOCKSKIT_MACROS__
