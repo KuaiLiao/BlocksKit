@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param controlEvents A bitmask specifying the control events for which the action message is sent.
  @see removeEventHandlersForControlEvents:
  */
-- (void)bk_addEventHandler:(void (^)(id sender))handler forControlEvents:(UIControlEvents)controlEvents;
+- (void)bk_addEventHandler:(void (^)(__kindof UIControl *sender))handler forControlEvents:(UIControlEvents)controlEvents;
 
 /** Removes all control event blocks associated with the given mask of control
  * events.
@@ -48,6 +48,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return Returns YES if there are blocks for these control events, NO otherwise.
  */
 - (BOOL)bk_hasEventHandlersForControlEvents:(UIControlEvents)controlEvents;
+
+/**
+ * bind event handle to UIControlEventTouchUpInside event
+ *
+ * @param handler A block representing an UIControlEventTouchUpInside action message, with an argument for the sender..
+ */
+- (void)bk_addEventHandler:(void (^)(__kindof UIControl *sender))handler;
 
 @end
 

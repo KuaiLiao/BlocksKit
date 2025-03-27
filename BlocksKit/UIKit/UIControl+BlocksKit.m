@@ -48,7 +48,7 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 
 @implementation UIControl (BlocksKit)
 
-- (void)bk_addEventHandler:(void (^)(id sender))handler forControlEvents:(UIControlEvents)controlEvents
+- (void)bk_addEventHandler:(void (^)(__kindof UIControl *sender))handler forControlEvents:(UIControlEvents)controlEvents
 {
 	NSParameterAssert(handler);
 	
@@ -106,6 +106,10 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 		return NO;
 	
 	return !!handlers.count;
+}
+
+- (void)bk_addEventHandler:(void (^)(__kindof UIControl *sender))handler{
+    [self bk_addEventHandler:handler forControlEvents:UIControlEventTouchUpInside];
 }
 
 @end
