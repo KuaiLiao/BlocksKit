@@ -51,4 +51,11 @@ Pod::Spec.new do |s|
     ss.platform = :ios
     ss.source_files = 'BlocksKit/BlocksKit+UIKit.h', 'BlocksKit/UIKit/*.{h,m}'
   end
+
+  s.subspec 'Deprecated' do |ss|
+    ss.dependency 'BlocksKit/Core'
+    ss.dependency 'BlocksKit/DynamicDelegate'
+    ss.platform = :ios
+    ss.source_files = 'BlocksKit/Deprecated/*.{h,m}'
+  end
 end

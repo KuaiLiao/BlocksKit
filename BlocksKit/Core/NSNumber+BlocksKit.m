@@ -7,7 +7,7 @@
 
 @implementation NSNumber (BlocksKit)
 
-- (void)bk_times:(void (^)())block
+- (void)bk_times:(void (^)(void))block
 {
   NSParameterAssert(block != nil);
 

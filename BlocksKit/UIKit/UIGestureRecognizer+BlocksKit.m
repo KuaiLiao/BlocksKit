@@ -76,7 +76,7 @@ static const void *BKGestureRecognizerShouldHandleActionKey = &BKGestureRecogniz
 
 - (void)bk_setHandlerDelay:(NSTimeInterval)delay
 {
-	NSNumber *delayValue = delay ? @(delay) : nil;
+	NSNumber *delayValue = delay > 0 ? @(delay) : nil;
 	objc_setAssociatedObject(self, BKGestureRecognizerDelayKey, delayValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
